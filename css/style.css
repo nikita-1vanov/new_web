@@ -150,6 +150,10 @@ h1 {
     font-size: 18px;
 }
 
+.check_page {
+    font-size: 18px;
+}
+
 .day_page_up, .day_page_down {
     font-size: 15px;
     margin-top: 20px;
@@ -260,6 +264,8 @@ button:hover {
     width: 100%;
 }
 
+
+
 /*---------Рекомендации----------*/
 
 .recomends {
@@ -304,6 +310,53 @@ footer p {
 }
 
 
+
+/*---------Чек-боксы---------*/
+
+div.checkbox {
+    margin-top: 20px;
+}
+
+label {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    padding-left: 25px;
+    margin-right: 15px;
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+
+input[type=checkbox] {
+    display: none;
+}
+
+
+.checkbox label:before {
+    border-radius: 3px;
+}
+
+label:before {
+    content: "";
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+    position: absolute;
+    left: 0;
+    background-color: #aaa;
+    box-shadow: inset 0px 2px 3px 0px rgba(0, 0, 0, .3), 0 1px 0 0 rgba(255, 255, 255, .8);
+}
+
+input[type=checkbox]:checked + label:before {
+    content: "\2713";
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, .2);
+    font-size: 20px;
+    color: #f3f3f3;
+    text-align: center;
+    line-height: 15px;
+    font-weight: bold;
+}
 
 /*---------Медиа запросы Ширина экрана до 1100px----------*/
 
@@ -431,6 +484,14 @@ footer p {
         font-size: 35px;
     }
 
+    .check_page {
+        color: black;
+        margin-bottom: 45px;
+        font-size: 35px;
+        padding-left: 75px;
+    }
+
+
     p.desc {
         max-width: 500px;
         font-size: 32px;
@@ -535,6 +596,31 @@ footer p {
     max-width: 250px;
     max-height: 250px;
     margin-right: 35px;
+    }
+
+
+    /*---------Чек-боксы---------*/
+
+    label {
+        display: inline-block;
+        cursor: pointer;
+        position: relative;
+        padding-left: 25px;
+        margin-right: 15px;
+        font-size: 13px;
+        margin-bottom: 15px;
+    }
+
+    label:before {
+        width: 40px;
+        height: 40px;
+        margin-top: 10px;
+    }
+
+    input[type=checkbox]:checked + label:before {
+        text-shadow: 5px 5px 5px rgba(0, 0, 0, .2);
+        font-size: 90px;
+        padding-top: 10px;
     }
 
 }
